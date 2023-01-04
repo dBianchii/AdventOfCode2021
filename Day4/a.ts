@@ -72,11 +72,11 @@ function playGame(drawsArray: string[], boardsArray: string[][][]) {
 }
 
 function determineIfBoardWonHorizontally(board: string[][]) {
-	board.forEach((line) => {
+	for (const line of board) {
 		if (line.every((element) => element == "X")) {
 			return true
 		}
-	})
+	}
 	return false
 }
 

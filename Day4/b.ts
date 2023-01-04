@@ -82,13 +82,12 @@ function parseBoards() {
 }
 
 function determineIfBoardWonHorizontally(board: string[][]) {
-	var boardHasWon = false
-	board.forEach((line) => {
+	for (const line of board) {
 		if (line.every((element) => element == "X")) {
-			boardHasWon = true
+			return true
 		}
-	})
-	return boardHasWon
+	}
+	return false
 }
 
 function determineIfBoardWonVertically(board: string[][]) {
