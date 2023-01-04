@@ -28,17 +28,13 @@ function calculateRating(
 	if (ratingType === "oxygen") {
 		currentArray =
 			arrayWithOne.length > arrayWithZero.length ? arrayWithOne : arrayWithZero
-
-		if (arrayWithOne.length === arrayWithZero.length) {
-			currentArray = arrayWithOne
-		}
 	} else if (ratingType === "cO2scrubber") {
 		currentArray =
 			arrayWithOne.length > arrayWithZero.length ? arrayWithZero : arrayWithOne
+	}
 
-		if (arrayWithOne.length === arrayWithZero.length) {
-			currentArray = arrayWithZero
-		}
+	if (arrayWithOne.length === arrayWithZero.length) {
+		currentArray = arrayWithZero
 	}
 
 	if (currentArray.length === 1) {
